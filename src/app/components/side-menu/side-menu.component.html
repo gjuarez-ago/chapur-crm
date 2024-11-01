@@ -1,0 +1,130 @@
+    <div class="content-principal" >
+      <div class="side-menu">
+        <div class="logo">
+          <img src="assets/img/chapur_b.png" width="110px" />
+        </div>
+  
+        <div class="menu-principal">
+          <nz-sider
+            class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null"
+          >
+            <ul
+              nz-menu
+              nzTheme="light"
+              nzMode="inline"
+              [nzInlineCollapsed]="isCollapsed"
+            >
+              <!-- <li nz-menu-item nzMatchRouter>
+            <i nz-icon nzType="bar-chart"> </i> 
+            <span> <a routerLink="/l/my-projects"> l</a> </span>
+          </li> -->
+  
+              <li nz-menu-item zMatchRouter>
+                <i nz-icon nzType="audit"> </i>
+                <span> <a routerLink="/project/list"> Tablero </a> </span>
+              </li>
+  
+              <li
+                nz-submenu
+                nzOpen
+                nzTitle="Marketing"
+                nzIcon="shopping-cart"
+              >
+                <ul>
+                  <li nz-menu-item nzMatchRouter>
+                    <div class="ori">
+                      <a routerLink="/l/cl-stores"> Encuestas </a>
+                      <i
+                        class="yellow"
+                        nz-icon
+                        nzType="exclamation"
+                        nzTheme="outline"
+                      ></i>
+                    </div>
+                  </li>
+  
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/pl-master"> Clientes  </a>
+                   
+                  </li>
+  
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/cat-products"> Telefonos </a>
+                   
+                  </li>
+  
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/cat-furnitures"> Direcciones </a>
+                   
+                  </li>
+                </ul>
+              </li>
+  
+           
+  
+              <li
+                nz-submenu
+                nzOpen
+                nzTitle="Soporte"
+                nzIcon="branches"
+              >
+                <ul>
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/pl-report"> Resum. Resultados </a>
+                  </li>
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/pl-analisis"> Análisis </a>
+                  </li>
+  
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/pl-planogram"> Casos </a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                nz-submenu
+                nzOpen
+                nzTitle="Administración"
+                nzIcon="apartment"
+              >
+                <ul>
+                  <li nz-menu-item nzMatchRouter >
+                    <a routerLink="/project/cat-users">Adm. Usuarios</a>
+                  </li>
+  
+                  <li nz-menu-item nzMatchRouter >
+                    <a routerLink="/project/cat-params">Adm. Parámetros</a>
+                  </li>
+                </ul>
+              </li>
+  
+              <!-- <li nz-menu-item zMatchRouter>
+                <i nz-icon nzType="user"> </i>
+                <span> <a routerLink="/l/my-profile"> Mi perfil </a></span>
+              </li> -->
+  
+              <!-- <li nz-menu-item nzMatchRouter>
+                <i nz-icon nzType="solution"> </i>
+                <span> <a routerLink="/faq"> FAQ </a></span>
+              </li>
+  
+              <li nz-menu-item nzTitle="Comprar" nzMatchRouter nzIcon="form">
+                <i nz-icon nzType="verified"> </i>
+                <span>
+                  <a routerLink="/avise-privacy"> Aviso de privacidad </a></span
+                >
+              </li> -->
+            </ul>
+          </nz-sider>
+        </div>
+      </div>
+      <div class="content-element">
+        <router-outlet> </router-outlet>
+      </div>
+    </div>
+  

@@ -1,0 +1,49 @@
+<nz-spin [nzSpinning]="isLoadingGeneral">
+
+    <div class="nav">
+        <div class="breadcrumb">
+            <nz-breadcrumb nzSeparator=">">
+                <nz-breadcrumb-item>
+                    <i nz-icon nzType="home"></i>
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                    <a>
+                        <i nz-icon nzType="appstore" nzTheme="outline"></i>
+                        <span>Marketing</span>
+                    </a>
+                </nz-breadcrumb-item>
+                <nz-breadcrumb-item>
+                    <a>
+                        <i nz-icon nzType="cluster"></i>
+                        <span>Catálogo de Clientes</span>
+                    </a>
+                </nz-breadcrumb-item>
+            </nz-breadcrumb>
+        </div>
+
+        <div class="info-button">
+            <div class="avatar">
+                <nz-avatar (click)="info()" style="color:#ffffff; background-color:#184194;" [nzSize]="37" nzText="{{getInitials()}}"></nz-avatar>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-screen">
+        <h2> Catalogo de Clientes  </h2>
+        <div class="icon-content">
+            <nz-space>
+                <a *nzSpaceItem routerLink="/"> <img src="assets/img/icons/maletin.svg" width="25px"> </a>
+            </nz-space>
+        </div>
+    </div>
+
+    <div class="content-principal">
+
+
+
+      
+    </div>
+
+
+
+</nz-spin>
