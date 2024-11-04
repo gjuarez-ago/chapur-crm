@@ -148,11 +148,159 @@ export class CustomersComponent {
     const initials = fullName.shift()!.charAt(0) + fullName.pop()!.charAt(0);
     return initials.toUpperCase();
   }
+  clientes: Cliente[] = [
+    {
+      noCliente: 1, nombreCompleto: 'Juan Pérez', numIden: 'ABC123', plaza: 'Plaza A', fechaNacimiento: '1980-01-15', calificacion: 90, genero: 'Masculino', emailPrincipal: 'juan.perez@example.com', asignadoA: 'Carlos López',
+      seleccionado: false
+    },
+    {
+      noCliente: 2, nombreCompleto: 'Ana Gómez', numIden: 'XYZ456', plaza: 'Plaza B', fechaNacimiento: '1992-03-22', calificacion: 85, genero: 'Femenino', emailPrincipal: 'ana.gomez@example.com', asignadoA: 'María Jiménez',
+      seleccionado: false
+    },
+    {
+      noCliente: 3, nombreCompleto: 'Luis Martínez', numIden: 'EFG789', plaza: 'Plaza C', fechaNacimiento: '1975-06-10', calificacion: 88, genero: 'Masculino', emailPrincipal: 'luis.martinez@example.com', asignadoA: 'Jorge Sánchez',
+      seleccionado: false
+    },
+    // Añade más clientes para llegar a 30
+    {
+      noCliente: 4, nombreCompleto: 'Pedro Rodríguez', numIden: 'HIJ101', plaza: 'Plaza D', fechaNacimiento: '1987-11-23', calificacion: 92, genero: 'Masculino', emailPrincipal: 'pedro.rodriguez@example.com', asignadoA: 'Sofía Medina',
+      seleccionado: false
+    },
+    {
+      noCliente: 5, nombreCompleto: 'María Fernández', numIden: 'KLM112', plaza: 'Plaza E', fechaNacimiento: '1995-05-18', calificacion: 75, genero: 'Femenino', emailPrincipal: 'maria.fernandez@example.com', asignadoA: 'Daniel Ruiz',
+      seleccionado: false
+    },
+    {
+      noCliente: 6, nombreCompleto: 'Carla Hernández', numIden: 'NOP134', plaza: 'Plaza F', fechaNacimiento: '1991-09-07', calificacion: 89, genero: 'Femenino', emailPrincipal: 'carla.hernandez@example.com', asignadoA: 'Patricia Ramírez',
+      seleccionado: false
+    },
+    {
+      noCliente: 7, nombreCompleto: 'José Navarro', numIden: 'QRS156', plaza: 'Plaza G', fechaNacimiento: '1983-02-12', calificacion: 84, genero: 'Masculino', emailPrincipal: 'jose.navarro@example.com', asignadoA: 'Andrés Gutiérrez',
+      seleccionado: false
+    },
+    {
+      noCliente: 8, nombreCompleto: 'Santiago Díaz', numIden: 'TUV178', plaza: 'Plaza H', fechaNacimiento: '1990-08-25', calificacion: 95, genero: 'Masculino', emailPrincipal: 'santiago.diaz@example.com', asignadoA: 'Carolina Flores',
+      seleccionado: false
+    },
+    {
+      noCliente: 9, nombreCompleto: 'Lucía Paredes', numIden: 'WXY190', plaza: 'Plaza I', fechaNacimiento: '1998-12-05', calificacion: 80, genero: 'Femenino', emailPrincipal: 'lucia.paredes@example.com', asignadoA: 'Raúl Romero',
+      seleccionado: false
+    },
+    {
+      noCliente: 10, nombreCompleto: 'Francisco Aguilar', numIden: 'ZAB210', plaza: 'Plaza J', fechaNacimiento: '1985-07-16', calificacion: 87, genero: 'Masculino', emailPrincipal: 'francisco.aguilar@example.com', asignadoA: 'Lorena Soto',
+      seleccionado: false
+    },
+    {
+      noCliente: 11, nombreCompleto: 'Sofía Ruiz', numIden: 'CDE232', plaza: 'Plaza K', fechaNacimiento: '1993-03-02', calificacion: 90, genero: 'Femenino', emailPrincipal: 'sofia.ruiz@example.com', asignadoA: 'Martín Herrera',
+      seleccionado: false
+    },
+    {
+      noCliente: 12, nombreCompleto: 'Enrique Romero', numIden: 'FGH254', plaza: 'Plaza L', fechaNacimiento: '1979-09-11', calificacion: 93, genero: 'Masculino', emailPrincipal: 'enrique.romero@example.com', asignadoA: 'Santiago Moreno',
+      seleccionado: false
+    },
+    // Completa hasta llegar a 30 registros
+    {
+      noCliente: 13, nombreCompleto: 'Paola García', numIden: 'IJK276', plaza: 'Plaza M', fechaNacimiento: '1982-04-20', calificacion: 77, genero: 'Femenino', emailPrincipal: 'paola.garcia@example.com', asignadoA: 'Javier Torres',
+      seleccionado: false
+    },
+    {
+      noCliente: 14, nombreCompleto: 'Rodrigo Salinas', numIden: 'LMN298', plaza: 'Plaza N', fechaNacimiento: '1997-10-30', calificacion: 82, genero: 'Masculino', emailPrincipal: 'rodrigo.salinas@example.com', asignadoA: 'Carmen Sánchez',
+      seleccionado: false
+    },
+    {
+      noCliente: 15, nombreCompleto: 'Gabriela Quintana', numIden: 'OPQ320', plaza: 'Plaza O', fechaNacimiento: '1989-06-01', calificacion: 91, genero: 'Femenino', emailPrincipal: 'gabriela.quintana@example.com', asignadoA: 'Felipe Martínez',
+      seleccionado: false
+    },
+    {
+      noCliente: 16, nombreCompleto: 'Esteban Castillo', numIden: 'RST342', plaza: 'Plaza P', fechaNacimiento: '1984-11-19', calificacion: 94, genero: 'Masculino', emailPrincipal: 'esteban.castillo@example.com', asignadoA: 'Joaquín Vega',
+      seleccionado: false
+    },
+    {
+      noCliente: 17, nombreCompleto: 'Mónica Varela', numIden: 'UVW364', plaza: 'Plaza Q', fechaNacimiento: '1991-05-25', calificacion: 78, genero: 'Femenino', emailPrincipal: 'monica.varela@example.com', asignadoA: 'Clara Villalobos',
+      seleccionado: false
+    },
+    {
+      noCliente: 18, nombreCompleto: 'Antonio Serrano', numIden: 'XYZ386', plaza: 'Plaza R', fechaNacimiento: '1978-01-14', calificacion: 83, genero: 'Masculino', emailPrincipal: 'antonio.serrano@example.com', asignadoA: 'Roberto Morales',
+      seleccionado: false
+    },
+    {
+      noCliente: 19, nombreCompleto: 'Patricia Ortega', numIden: 'ABC408', plaza: 'Plaza S', fechaNacimiento: '1996-09-27', calificacion: 88, genero: 'Femenino', emailPrincipal: 'patricia.ortega@example.com', asignadoA: 'Guadalupe Ríos',
+      seleccionado: false
+    },
+    {
+      noCliente: 20, nombreCompleto: 'Mauricio Reyes', numIden: 'DEF430', plaza: 'Plaza T', fechaNacimiento: '1981-02-05', calificacion: 85, genero: 'Masculino', emailPrincipal: 'mauricio.reyes@example.com', asignadoA: 'Juanita Mendoza',
+      seleccionado: false
+    },
+    // Añadir más hasta tener 30 o más registros.
+  ];
 
 
+  // Métodos para los botones de acción
+  verCliente(cliente: Cliente) {
+    console.log('Ver cliente:', cliente);
+  }
+
+  editarCliente(cliente: Cliente) {
+    console.log('Editar cliente:', cliente);
+  }
+
+  eliminarCliente(cliente: Cliente) {
+    console.log('Eliminar cliente:', cliente);
+  }
+
+  allChecked = false;
+  clientesSeleccionados: any[] = [];
+
+  searchText : any;
+
+  // Al seleccionar/deseleccionar un checkbox individual
+  onItemChecked(cliente: any): void {
+    if (cliente.seleccionado) {
+      this.clientesSeleccionados.push(cliente);
+    } else {
+      this.clientesSeleccionados = this.clientesSeleccionados.filter((c) => c !== cliente);
+    }
+    this.updateAllCheckedStatus();
+  }
+
+  // Al seleccionar/deseleccionar el checkbox principal
+  onAllChecked(checked: boolean): void {
+    this.allChecked = checked;
+    this.clientes.forEach((cliente) => (cliente.seleccionado = checked));
+
+    this.clientesSeleccionados = checked ? [...this.clientes] : [];
+  }
+
+  // Actualizar el estado del checkbox principal
+  updateAllCheckedStatus(): void {
+    const allSelected = this.clientes.every((cliente) => cliente.seleccionado);
+    const noneSelected = this.clientes.every((cliente) => !cliente.seleccionado);
+
+    this.allChecked = allSelected && !noneSelected;
+  }
+
+  descargarSeleccionados(): void {
+    // Lógica para descargar seleccionados
+    console.log('Descargar seleccionados:', this.clientesSeleccionados);
+  }
 
 }
 
+
+
+
+interface Cliente {
+  noCliente: number;
+  nombreCompleto: string;
+  numIden: string;
+  plaza: string;
+  fechaNacimiento: string;
+  calificacion: number;
+  genero: 'Masculino' | 'Femenino';
+  emailPrincipal: string;
+  asignadoA: string;
+  seleccionado: boolean;
+}
 
 
 interface DataItem {

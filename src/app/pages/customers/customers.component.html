@@ -29,7 +29,7 @@
     </div>
 
     <div class="header-screen">
-        <h2> Catalogo de Clientes  </h2>
+        <h2> Listado de Clientes  </h2>
         <div class="icon-content">
             <nz-space>
                 <a *nzSpaceItem routerLink="/"> <img src="assets/img/icons/maletin.svg" width="25px"> </a>
@@ -38,6 +38,132 @@
     </div>
 
     <div class="content-principal">
+
+
+        <div class="buttons-options">
+            <div class="buttons-left">
+              <nz-space>
+                <button *nzSpaceItem class="button-green" nz-button ><i nz-icon
+                    nzType="download"></i>Plantilla</button>
+                <button *nzSpaceItem class="button-blue" nz-button (click)="uploader.click()"><i nz-icon
+                    nzType="cloud-upload"></i>Subir Archivo <input hidden type="file" #uploader
+                     /> </button>
+                    <button *nzSpaceItem class="button-blue" nz-button >
+                        <i nz-icon
+                      nzType="user"></i>
+                        <i nz-icon
+                      nzType="plus"></i>Agregar usuario
+                    <input hidden type="button" #uploader  />
+                  </button>
+              </nz-space>
+            </div>
+    
+            <div class="buttons-right" >
+              <nz-space>
+                <button *nzSpaceItem class="button-white"       [disabled]="!clientesSeleccionados.length"
+                nz-button><i nz-icon nzType="edit"
+                    ></i>Editar</button>
+                <button  *nzSpaceItem class="button-red"      [disabled]="!clientesSeleccionados.length"
+                nz-button><i nz-icon
+                    nzType="delete"></i>Eliminar</button>
+                <button *nzSpaceItem class="button-white"       [disabled]="!clientesSeleccionados.length"
+                nz-button ><i nz-icon
+                    nzType="setting"></i>Mas opciones</button>
+              </nz-space>
+            </div>
+          </div>
+          <br>
+          <div class="alarm-yellow" >
+            <div class="icon-s">
+                <div class="icon-info"> <i nz-icon nzType="exclamation-circle" nzTheme="outline"></i> </div>
+                <div class="text-alert"> <strong class="strong"> Aviso: </strong> Un elemento o varios tienen un
+                    problema </div>
+            </div>
+            <div class="icon-s">
+              <nz-space >
+                <button  *nzSpaceItem class="button-blue"> Ver resumen </button>
+                <button  *nzSpaceItem class="button-green"> Resolver </button>
+              </nz-space>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="overflow-x: auto; margin: 20px;">
+
+          <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+            <input type="text" nz-input placeholder="Buscar cliente por correo, nombre, email, número de identificación" />
+          </nz-input-group>
+          <ng-template #suffixButton>
+            <button nz-button class="button-blue" nzType="primary" nzSize="large" nzSearch>Buscar clientes</button>
+          </ng-template>
+
+          <br>
+          
+          <br>
+   
+<nz-table #basicTable [nzData]="clientes" [nzPageSize]="10" [nzScroll]="{ x: '1200px' }">
+    <thead>
+      <tr>
+        <th nzWidth="50px">
+          <label nz-checkbox [(ngModel)]="allChecked" (ngModelChange)="onAllChecked($event)"></label>
+        </th>
+        <th nzWidth="180px">Acción</th>
+        <th nzWidth="100px" nzSortKey="noCliente">No. Cliente</th>
+        <th nzWidth="200px" nzSortKey="nombreCompleto">Nombre Completo</th>
+        <th nzWidth="100px" nzSortKey="numIden">NumIden</th>
+        <th nzWidth="150px" nzSortKey="plaza">Plaza</th>
+        <th nzWidth="200px" nzSortKey="fechaNacimiento">Fecha de Nacimiento</th>
+        <th nzWidth="100px" nzSortKey="calificacion">Calificación</th>
+        <th nzWidth="150px">Género</th>
+        <th nzWidth="200px">Email Principal</th>
+        <th nzWidth="200px">Asignado a</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of basicTable.data">
+        <td>
+          <label nz-checkbox [(ngModel)]="cliente.seleccionado" (ngModelChange)="onItemChecked(cliente)">
+          </label>
+        </td>
+        <td>
+            <nz-space>
+                <button *nzSpaceItem nz-button nzType="primary" nzShape="circle" (click)="verCliente(cliente)" >
+                  <span nz-icon nzType="eye"></span>
+                </button>
+                <button *nzSpaceItem nz-button nzType="default" nzShape="circle" (click)="editarCliente(cliente)" >
+                    <span nz-icon nzType="star"></span>
+                  </button>
+                <button *nzSpaceItem nz-button nzType="default" nzShape="circle" (click)="editarCliente(cliente)" >
+                  <span nz-icon nzType="edit"></span>
+                </button>
+                <button *nzSpaceItem nz-button  nzShape="circle" (click)="eliminarCliente(cliente)" >
+                  <span nz-icon nzType="message"></span>
+                </button>
+              </nz-space>
+          </td>
+        <td>{{ cliente.noCliente }}</td>
+        <td>{{ cliente.nombreCompleto }}</td>
+        <td>{{ cliente.numIden }}</td>
+        <td>{{ cliente.plaza }}</td>
+        <td>{{ cliente.fechaNacimiento | date: 'longDate' }}</td>
+        <td>{{ cliente.calificacion }}</td>
+        <td>
+          <nz-tag [nzColor]="cliente.genero === 'Masculino' ? 'blue' : 'magenta'">
+            {{ cliente.genero }}
+          </nz-tag>
+        </td>
+        <td>{{ cliente.emailPrincipal }}</td>
+        <td>{{ cliente.asignadoA }}</td>
+     
+      </tr>
+    </tbody>
+  </nz-table>
+          </div>
+          
+
+    
 
 
 

@@ -39,7 +39,7 @@ export class LoginComponent {
 
   submitForm(): void {
 
-    this.router.navigate(["l/cl-stores"]);
+    this.router.navigate(["l/customers"]);
    
   }
 

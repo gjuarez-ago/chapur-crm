@@ -13,10 +13,10 @@ import { ResetPasswordComponent } from './pages/auth/reset-password/reset-passwo
 const routes: Routes = [
   {
     path: 'l', component: SideMenuComponent, children: [
-      { path: "cl-stores", component: CustomersComponent },
-      { path: "cl-stores/:projectNow/:id", component: DashboardComponent },
-      { path: "cl-stores-det/:projectNow/:id", component: ReportsComponent },
-      { path: "cat-products", component: TicketsComponent },
+      { path: "customers", component: CustomersComponent },
+      { path: "dashboard", component: DashboardComponent },
+      { path: "reports", component: ReportsComponent },
+      { path: "tickets", component: TicketsComponent },
       { path: '', pathMatch: 'full', redirectTo: '/login' },
     ],
     // canActivate: [ AuthGuard ]

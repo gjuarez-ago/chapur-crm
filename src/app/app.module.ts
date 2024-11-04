@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,10 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { NgZoroModulesComponents } from './modules/ng-zorro-modules-components';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { CanvasChartComponent } from './components/canvas-chart/canvas-chart.component';
+import { CanvasPieChartComponent } from './components/canvas-pie-chart/canvas-pie-chart.component';
+import { CanvasScatterChartComponent } from './components/canvas-scatter-chart/canvas-scatter-chart.component';
+import { CanvasLinearChartComponent } from './components/canvas-linear-chart/canvas-linear-chart.component';
 
 registerLocaleData(en);
 
@@ -38,7 +42,11 @@ registerLocaleData(en);
     DashboardComponent,
     ReportsComponent,
     SideMenuComponent,
-    AuthComponent
+    AuthComponent,
+    CanvasChartComponent,
+    CanvasLinearChartComponent,
+    CanvasPieChartComponent,
+    CanvasScatterChartComponent
   ],
   imports: [
     NgZoroModulesComponents,
@@ -56,6 +64,9 @@ registerLocaleData(en);
   providers: [
     { provide: NZ_I18N, useValue: en_US }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // Añade esta línea
+
+
 })
 export class AppModule { }

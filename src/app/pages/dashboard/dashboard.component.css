@@ -1,0 +1,390 @@
+
+.container-dash {
+    margin: 20px;
+}
+
+.layout {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.element-statistic {
+    /* box-shadow: 5px 10px 20px -10px rgba(0,0,0,0.75); */
+    padding: 10px;
+}
+
+.welcome {
+    color: #000000;
+}
+
+.count {
+    padding-left: 8px;
+    cursor: auto;
+  }
+
+.ant-comment-rtl .count {
+    padding-right: 8px;
+    padding-left: 0;
+  }
+
+
+.announcement-header
+  {
+    display: flex;
+  }
+
+.announcements {
+    width: 70%;
+}
+
+
+.statists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-s {
+  padding: 10px 10px 0px 10px;
+    /* box-shadow: 5px 10px 20px -10px rgba(0,0,0,0.75); */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 30%;
+  margin: 0px 0px 30px 0px;
+  border-radius: 10px;
+}
+
+.statists-2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-sp {
+  width: 30%;
+}
+
+.card-sa {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.chart-ele {
+  margin: 1%;
+  width: 48%;
+}
+
+.nav {
+    margin: 0px 0px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    padding: 13px 20px;
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.layout {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+
+a.btn {
+    color: #ffff;
+}
+
+a.btn:hover {
+    color: rgb(224, 221, 221);
+}
+
+
+.buttons-options{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.buttons-left {
+    padding: 5px 5px;
+}
+
+
+.buttons-right {
+    padding: 5px 5px;
+}
+
+.table-content {
+    margin: 0px 0px;
+}
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.content-principal {
+  padding: 0px 0px;
+}
+
+
+nz-avatar {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header-screen {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    border: 1px solid rgb(202, 202, 202);
+    margin: 0px;
+}
+
+h2 {
+    font-size: 1.6em;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+
+.icon-content {
+    margin-right: 10px;
+}
+
+
+.content-table {
+    margin: 10px;
+    padding: 0px 20px;
+}
+
+
+.alarm-yellow {
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px;
+    background-color: rgb(245, 243, 243);
+    border-left: 12px solid rgb(233, 218, 11);
+    color: black;
+}
+
+.icon-s {
+    display: flex;
+    align-items: center;
+}
+
+.icon-info {
+    margin: 0px 25px 0px 0px;
+    font-size: 20px;
+    color: black;
+}
+
+.strong {
+    color: black;
+    font-weight: bold;
+}
+
+.mg-1 {
+    margin: 0px 20px 0px 0px;
+}
+
+.button-icon {
+    /* padding: 10px; */
+    background-color: rgb(235, 235, 235);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px !important;
+}
+
+.space-width {
+    padding: 10px;
+}
+
+.input-element {
+    margin: 5px 5px 0px 10px;
+}
+
+.question {
+    margin: 20px 0px 0px 0px;
+}
+
+.question label{
+  margin: 0px 10px 0px 0px;
+}
+
+.title-s {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.titulo{
+    border: 1px solid #b4bbbb ;
+    background-color: #f3f5fd;
+    font-weight: bold;
+    text-align: right;
+}
+
+.desc{
+    border: 1px solid #b4bbbb;
+     text-align: left;
+     width: 70%;
+     font-weight: bolder;
+  }
+
+  
+.table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+
+
+.element-incidents-a {
+    margin: 0px 0px 30px 0px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.buttons-incidents {
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wmargin {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wmargin-p {
+    padding: 0px;
+    margin: 2px 0px;
+}
+
+.la-inc {
+   display: flex;
+   justify-content: space-around;
+}
+
+.icon-sa {
+    width: 10%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-incidents {
+    width: 90%;
+}
+
+.thead{
+    text-align: left;
+    border: 1px solid  #DBDADA;
+    background-color:   #F3F5FD;
+    padding: 10px;
+}
+
+.tbody{
+    text-align: left;
+    border: 1px solid  #DBDADA;
+    padding: 8px;
+}
+
+.error {
+    font-size: 10px;
+    color: rgb(159, 0, 0);
+}
+
+.d {
+    margin: 5px 0px 5px 0px;;
+}
+
+:host ::ng-deep .ant-table-cell {
+    white-space: nowrap; /* Evita que el contenido de las celdas se rompa en múltiples líneas */
+  }
+  
+  .ant-tag {
+    text-transform: capitalize; /* Capitaliza el género */
+  }
+  
+
+  .logo {
+    color: white;
+    font-size: 20px;
+    line-height: 64px;
+    padding: 0 20px;
+    float: left;
+  }
+  
+  h3 {
+    margin-bottom: 16px;
+  }
+  
+  .nz-card {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio entre elementos */
+  }
+  
+  .chart-item {
+    flex: 1 1 calc(25% - 16px); /* Ancho de cada gráfico */
+    margin: 8px; /* Espacio entre gráficos */
+    min-width: 300px; /* Ancho mínimo para evitar que se compacten demasiado */
+  }
+  
+  .nz-table {
+    margin-top: 16px;
+  }
+  
+
+  .stat-card {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card h4 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .stat-card p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  

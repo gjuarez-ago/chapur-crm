@@ -26,7 +26,7 @@
   
               <li nz-menu-item zMatchRouter>
                 <i nz-icon nzType="audit"> </i>
-                <span> <a routerLink="/project/list"> Tablero </a> </span>
+                <span> <a routerLink="/l/dashboard"> Tablero </a> </span>
               </li>
   
               <li
@@ -36,9 +36,15 @@
                 nzIcon="shopping-cart"
               >
                 <ul>
+                
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/customers"> Clientes  </a>
+                   
+                  </li>
+ 
                   <li nz-menu-item nzMatchRouter>
                     <div class="ori">
-                      <a routerLink="/l/cl-stores"> Encuestas </a>
+                      <a routerLink="/l/encuestas"> Encuestas </a>
                       <i
                         class="yellow"
                         nz-icon
@@ -48,11 +54,7 @@
                     </div>
                   </li>
   
-                  <li nz-menu-item nzMatchRouter>
-                    <a routerLink="/l/pl-master"> Clientes  </a>
-                   
-                  </li>
-  
+
                   <li nz-menu-item nzMatchRouter>
                     <a routerLink="/l/cat-products"> Telefonos </a>
                    
@@ -74,6 +76,11 @@
                 nzIcon="branches"
               >
                 <ul>
+                  
+                  <li nz-menu-item nzMatchRouter>
+                    <a routerLink="/l/tickets"> Casos </a>
+                  </li>
+
                   <li nz-menu-item nzMatchRouter>
                     <a routerLink="/l/pl-report"> Resum. Resultados </a>
                   </li>
@@ -81,9 +88,7 @@
                     <a routerLink="/l/pl-analisis"> Análisis </a>
                   </li>
   
-                  <li nz-menu-item nzMatchRouter>
-                    <a routerLink="/l/pl-planogram"> Casos </a>
-                  </li>
+                 
                 </ul>
               </li>
               <li

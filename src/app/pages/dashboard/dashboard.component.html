@@ -1,1 +1,246 @@
-<p>dashboard works!</p>
+<div class="nav">
+  <div class="breadcrumb">
+      <nz-breadcrumb nzSeparator=">">
+          <nz-breadcrumb-item>
+              <i nz-icon nzType="home"></i>
+          </nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+              <a>
+                  <i nz-icon nzType="appstore" nzTheme="outline"></i>
+                  <span>Home</span>
+              </a>
+          </nz-breadcrumb-item>
+          <nz-breadcrumb-item>
+              <a>
+                  <i nz-icon nzType="cluster"></i>
+                  <span>Dasboard</span>
+              </a>
+          </nz-breadcrumb-item>
+      </nz-breadcrumb>
+  </div>
+
+  <div class="info-button">
+      <div class="avatar">
+          <nz-avatar  style="color:#ffffff; background-color:#184194;" [nzSize]="37" nzText="{{getInitials()}}"></nz-avatar>
+      </div>
+  </div>
+</div>
+
+<div class="header-screen">
+  <h2>   </h2>
+  <div class="icon-content">
+      <nz-space>
+      </nz-space>
+  </div>
+</div>
+
+
+
+<div class="container-dash">
+  <div class="container-welcome">
+  
+    <h2> <strong class="welcome">  Bienvenido  </strong> <span> Gabriel Juarez 😃 </span> </h2>
+
+   <div class="contact">
+    <nz-tag nzColor="#55acee">
+      <i nz-icon nzType="twitter"></i>
+      <span>Twitter</span>
+    </nz-tag>
+    <nz-tag nzColor="#cd201f">
+      <i nz-icon nzType="youtube"></i>
+      <span>Youtube</span>
+    </nz-tag>
+    <nz-tag nzColor="#3b5999">
+      <i nz-icon nzType="facebook"></i>
+      <span>Facebook</span>
+    </nz-tag>
+    <nz-tag nzColor="#55acee">
+      <i nz-icon nzType="linkedin"></i>
+      <span>LinkedIn</span>
+    </nz-tag>
+   </div>
+
+
+  </div>
+
+  <br>
+  
+  <div class="statists">
+
+        <div class="card-s">                    
+          <h2> 
+            <!-- <i nz-icon nzType="alert" nzTheme="twotone"></i> -->
+            <i nz-icon nzType="pie-chart" nzTheme="twotone"></i>
+               400 Casos registrados  </h2>
+               <p> Actualizado: 2021/03/20  </p>       
+        </div>
+
+        <div class="card-s">                    
+          <h2> 
+            <i nz-icon nzType="heart" nzTheme="twotone" [nzTwotoneColor]="'#a31600'"  ></i>
+               3,020 Favoritos </h2>
+               <p> Actualizado: 2021/03/20  </p>
+        </div>
+
+           <div class="card-s">                    
+          <h2> 
+            <i nz-icon nzType="alert" nzTheme="twotone"></i>
+               10,020 Reportes </h2>
+               <p> Actualizado: 2021/03/20  </p>
+          
+        </div>          
+  </div>
+  
+  
+  <nz-row [nzGutter]="16">
+
+    <nz-col nzSpan="24">
+      <nz-card>
+        <div class="charts-container">
+          <div class="chart-item">
+            <h4>Gráfico de Clientes</h4>
+            <app-canvas-chart></app-canvas-chart>
+          </div>
+          <div class="chart-item">
+            <h4>Gráfico de Puntos</h4>
+            <app-canvas-pie-chart></app-canvas-pie-chart>
+          </div>
+          <div class="chart-item">
+            <h4>Gráfico Lineal</h4>
+            <app-canvas-linear-chart></app-canvas-linear-chart>
+          </div>
+      
+        </div>
+      </nz-card>
+    </nz-col>
+
+  </nz-row>
+
+  <!-- Segunda línea de estadísticas rápidas -->
+  <nz-row [nzGutter]="16" style="margin-top: 20px;">
+    <nz-col nzSpan="8">
+      <nz-card class="stat-card" [ngStyle]="{'background-color': '#fff0f6', 'color': '#ff4d4f'}">
+        <h4>
+          <i nz-icon nzType="shopping-cart" nzTheme="twotone"></i>
+          Total Ventas
+        </h4>
+        <p>{{ totalSales }}</p>
+      </nz-card>
+    </nz-col>
+    <nz-col nzSpan="8">
+      <nz-card class="stat-card" [ngStyle]="{'background-color': '#e6ffed', 'color': '#73d13d'}">
+        <h4>
+          <i nz-icon nzType="user-add" nzTheme="twotone"></i>
+          Total Usuarios Activos
+        </h4>
+        <p>{{ activeUsers }}</p>
+      </nz-card>
+    </nz-col>
+    <nz-col nzSpan="8">
+      <nz-card class="stat-card" [ngStyle]="{'background-color': '#f0f5ff', 'color': '#40a9ff'}">
+        <h4>
+          <i nz-icon nzType="bell" nzTheme="twotone"></i>
+          Total Notificaciones
+        </h4>
+        <p>{{ totalNotifications }}</p>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+  
+
+  
+
+  <nz-row [nzGutter]="16" style="margin-top: 20px;">
+ 
+    <nz-col nzSpan="12">
+      <nz-card>
+        <h3>Notificaciones</h3>
+        <nz-list
+          [nzData]="notifications"
+          [nzBordered]="true"
+          [nzLoading]="loading"
+          [nzItemLayout]="'horizontal'">
+          <nz-list-item *ngFor="let notification of notifications">
+            <nz-list-item-meta
+              [nzAvatar]="notification.icon"
+              [nzTitle]="notification.title"
+              [nzDescription]="notification.description">
+            </nz-list-item-meta>
+            <nz-list-item-action>
+              <span>{{ notification.date | date: 'short' }}</span>
+            </nz-list-item-action>
+          </nz-list-item>
+        </nz-list>
+      </nz-card>
+    </nz-col>
+  
+    <nz-col nzSpan="12">
+      <nz-card>
+        <h3>Estadísticas Rápidas</h3>
+        <nz-row [nzGutter]="16">
+          <nz-col nzSpan="8">
+            <nz-card class="stat-card" [ngStyle]="{'background-color': '#e6f7ff', 'color': '#1890ff'}">
+              <h4>
+                <i nz-icon nzType="mail" nzTheme="twotone"></i>
+                Total Clientes
+              </h4>
+              <p>{{ totalClients }}</p>
+            </nz-card>
+          </nz-col>
+          <nz-col nzSpan="8">
+            <nz-card class="stat-card" [ngStyle]="{'background-color': '#fff7e6', 'color': '#faad14'}">
+              <h4>
+                <i nz-icon nzType="file" nzTheme="twotone"></i>
+                Tickets Abiertos
+              </h4>
+              <p>{{ openTickets }}</p>
+            </nz-card>
+          </nz-col>
+          <nz-col nzSpan="8">
+            <nz-card class="stat-card" [ngStyle]="{'background-color': '#f6ffed', 'color': '#52c41a'}">
+              <h4>
+                <i nz-icon nzType="money-collect" nzTheme="twotone"></i>
+                Ingresos Mensuales
+              </h4>
+              <p>${{ monthlyRevenue }}</p>
+            </nz-card>
+          </nz-col>
+        </nz-row>
+      </nz-card>
+    </nz-col>
+  </nz-row>
+  
+  
+
+  <nz-row [nzGutter]="16" style="margin-top: 20px;">
+
+    <nz-col nzSpan="24">
+      <nz-card>
+        <h3>Últimos Clientes</h3>
+        <nz-table #basicTable [nzData]="customers" [nzBordered]="true">
+          <thead>
+            <tr>
+              <th nzWidth="25%">Nombre</th>
+              <th nzWidth="25%">Email</th>
+              <th nzWidth="25%">Teléfono</th>
+              <th nzWidth="25%">Fecha de Registro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of basicTable.data">
+              <td>{{ customer.name }}</td>
+              <td>{{ customer.email }}</td>
+              <td>{{ customer.phone }}</td>
+              <td>{{ customer.registrationDate | date }}</td>
+            </tr>
+          </tbody>
+        </nz-table>
+      </nz-card>
+    </nz-col>
+
+  </nz-row>
+
+    
+  
+
+</div>
